@@ -730,6 +730,7 @@ cpdef tuple get_clusters(np.ndarray tree, dict stability,
         # (exclude root)
 
     cluster_tree = tree[tree['child_size'] > 1]
+    print(node_list)
     is_cluster = {cluster: True for cluster in node_list}
     num_points = np.max(tree[tree['child_size'] == 1]['child']) + 1
     max_lambda = np.max(tree['lambda_val'])
