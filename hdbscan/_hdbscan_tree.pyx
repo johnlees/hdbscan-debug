@@ -719,6 +719,8 @@ cpdef tuple get_clusters(np.ndarray tree, dict stability,
     cdef np.ndarray labels
     cdef np.double_t max_lambda
 
+    print("working")
+
     # Assume clusters are ordered by numeric id equivalent to
     # a topological sort of the tree; This is valid given the
     # current implementation above, so don't change that ... or
